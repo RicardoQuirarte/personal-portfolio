@@ -4,7 +4,7 @@
 
 body {
   font-family: "Montserrat";
-  background-color: var(--purple);
+  background-color: orange;
 }
 
 img {
@@ -13,8 +13,11 @@ img {
 
 nav {
   border-bottom: solid 1px black;
-  background-color: white;
+  background-color: orange;
+  color: white;
   padding-top: 5px;
+  height: 6vh;
+  position: sticky;
 }
 
 ol {
@@ -45,8 +48,13 @@ li:hover {
   padding-right: 15px;
 }
 
+.git-icon {
+  padding-top: 20px;
+}
+
 .first-section {
   display: flex;
+  height: 93vh;
 }
 
 .about-me {
@@ -54,21 +62,52 @@ li:hover {
   color: white;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
   padding: 25px;
-  /* width: 500px; */
+  width: 50%;
 }
 
 aside {
   display: flex;
-  background-color: orange;
+  background-color: white;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
-  /* width: 50%; */
   justify-content: center;
+  width: 50%;
+}
+
+.tooltip {
+  background-color: white;
+  color: black;
+  width: 66px;
+  height: 33px;
+  text-align: center;
+  padding: 15px;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    65% 75%,
+    50% 100%,
+    40% 75%,
+    0 75%
+  );
+  margin-left: 20px;
+  animation: change-color 2s infinite alternate;
+}
+
+.tooltip:hover {
+  background-color: green;
+  color: white;
 }
 
 .me {
   margin-bottom: 200px;
   margin-top: 100px;
+  padding-left: 120px;
 }
+
+.me:hover {
+  background-color: black;
+}
+
 .about {
   margin-top: 100px;
 }
@@ -76,7 +115,7 @@ aside {
 .icons {
   display: grid;
   align-items: center;
-  padding-right: 25px;
+  padding-left: 50px;
 }
 
 .linkedin-icon {
@@ -93,15 +132,21 @@ aside {
   display: grid;
   background-color: orange;
   padding: 25px;
+  padding-top: 150px;
 }
 
-.projects-img {
-  border: double 10px white;
+.projects-img-right {
+  box-shadow: 60px -20px black;
+}
+
+.projects-img-left {
+  box-shadow: -60px -20px black;
 }
 
 .projects {
   display: flex;
   padding: 25px;
+  padding-bottom: 125px;
 }
 
 .projects-info {
@@ -119,6 +164,29 @@ h4 {
   display: grid;
   align-items: center;
   padding: 25px;
+}
+
+.git-live {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons-gl {
+  background-color: white;
+  border: solid 1px black;
+  margin: 15px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  width: 60px;
+  height: 20px;
+  text-align: center;
+  padding: 7px;
+}
+
+.buttons-gl:hover {
+  background-color: black;
+  color: white;
+  border: solid 1px var(--purple);
+  cursor: pointer;
 }
 
 .contact {
@@ -152,4 +220,13 @@ h4 {
   display: grid;
   justify-content: center;
   font-size: 1.2rem;
+}
+
+@keyframes change-color {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: orange;
+  }
 }
