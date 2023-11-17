@@ -2,22 +2,25 @@
   --purple: #461c3a;
 }
 
-body {
-  font-family: "Montserrat";
-  background-color: orange;
+html {
+  scroll-behavior: smooth;
 }
 
-img {
-  /* transform: scale(0.25); */
+body {
+  font-family: "Montserrat";
+  /* background-color: orange; */
 }
 
 nav {
   border-bottom: solid 1px black;
-  background-color: orange;
+  background-color: #dc2626;
   color: white;
-  padding-top: 5px;
   height: 6vh;
   position: sticky;
+  top: 0;
+  z-index: 2;
+  display: grid;
+  padding-bottom: 10px;
 }
 
 ol {
@@ -27,14 +30,26 @@ ol {
 }
 
 li {
+  display: grid;
   justify-self: center;
-  padding: 5px;
+  background-color: black;
+  align-items: center;
+  padding: 10px;
 }
 
 li:hover {
-  background-color: orange;
-  opacity: 0.7;
+  background-color: #461c3a;
+}
+
+a:hover {
+  background-color: white;
+  color: black;
+}
+
+a {
+  text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 
 .home {
@@ -65,17 +80,31 @@ li:hover {
   width: 50%;
 }
 
+.about-me:hover {
+  background-color: #1e40af;
+  color: white;
+}
+
+.about-me:hover .tooltip {
+  background-color: #dc2626;
+  color: white;
+}
+
 aside {
   display: flex;
-  background-color: white;
+  background-color: orange;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
   justify-content: center;
   width: 50%;
 }
 
+aside:hover {
+  background-color: #15803d;
+  color: white;
+}
+
 .tooltip {
-  background-color: white;
-  color: black;
+  color: white;
   width: 66px;
   height: 33px;
   text-align: center;
@@ -90,22 +119,14 @@ aside {
     0 75%
   );
   margin-left: 20px;
-  animation: change-color 2s infinite alternate;
-}
-
-.tooltip:hover {
-  background-color: green;
-  color: white;
+  background-color: orange;
+  /* animation: change-color 2s infinite alternate, move 2s ease-in-out; */
 }
 
 .me {
   margin-bottom: 200px;
   margin-top: 100px;
   padding-left: 120px;
-}
-
-.me:hover {
-  background-color: black;
 }
 
 .about {
@@ -147,6 +168,7 @@ aside {
   display: flex;
   padding: 25px;
   padding-bottom: 125px;
+  border-bottom: solid 1px black;
 }
 
 .projects-info {
@@ -180,6 +202,7 @@ h4 {
   height: 20px;
   text-align: center;
   padding: 7px;
+  color: black;
 }
 
 .buttons-gl:hover {
@@ -208,11 +231,29 @@ h4 {
 .contact-title-text {
   font-size: 4rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-info {
   display: flex;
   align-items: center;
+}
+
+.see-all {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-size: 3rem;
+  border-bottom: solid 1px black;
+  cursor: pointer;
+  background-color: white;
+  padding: 10px;
+}
+
+.see-all:hover {
+  background-color: #dc2626;
+  color: white;
 }
 
 .info {
@@ -222,11 +263,20 @@ h4 {
   font-size: 1.2rem;
 }
 
-@keyframes change-color {
-  from {
-    background-color: white;
+.stack {
+  width: 75px;
+  height: 75px;
+  margin: 15px;
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(45deg);
   }
-  to {
-    background-color: orange;
+  50% {
+    transform: rotate(-1rad);
+  }
+  100% {
+    transform: rotate(0);
   }
 }
