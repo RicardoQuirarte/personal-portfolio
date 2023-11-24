@@ -38,12 +38,7 @@ li {
 }
 
 li:hover {
-  background-color: #461c3a;
-}
-
-a:hover {
-  background-color: white;
-  color: black;
+  background-color: orange;
 }
 
 a {
@@ -267,6 +262,32 @@ h4 {
   width: 75px;
   height: 75px;
   margin: 15px;
+}
+
+.colors {
+  background-color: orange;
+}
+
+.text-projects-left {
+  transform: translateX(-600px);
+  opacity: 0;
+  transition: 1.5s ease-in-out all;
+}
+
+.img-projects-rigt {
+  transform: translateX(600px);
+  opacity: 0;
+  transition: 1.5s ease-in-out all;
+}
+
+.movement {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.movementt {
+  transform: translateX(0px);
+  opacity: 1;
 }
 
 @keyframes move {

@@ -1,37 +1,27 @@
-const sections = document.querySelectorAll(".sections");
-const about = document.querySelector(".nav-about");
+const miniSection1 = document.querySelector("#mini-section-1");
+const miniSection2 = document.querySelector("#mini-section-2");
+const text1 = document.querySelector("#text1");
+const img1 = document.querySelector("#img1");
 const projects = document.querySelector(".nav-projects");
-const contact = document.querySelector(".nav-contact");
 
-let indexSeccionActivada;
+const loadImage = (entrys, observer) => {
+  entrys.forEach((entry) => {
+    if (entry.isIntersecting) {
+      text1.classList.toggle("movement");
+      img1.classList.toggle("movementt");
+      projects.classList.toggle("colors");
+    } else {
+      text1.classList.remove("movement");
+      img1.classList.remove("movementt");
+      projects.classList.remove("colors");
+    }
+  });
+};
 
-const observer = new IntersectionObserver(
-  (entradas) => {
-    entradas.forEach((entrada) => {
-      if (entrada.isIntersecting) {
-        indexSeccionActivada = [...sections].indexOf(entrada.target);
-      }
-      if (indexSeccionActivada == "0") {
-        about.style.backgroundColor = "orange";
-      } else {
-        about.style.backgroundColor = "black";
-      }
-      if (indexSeccionActivada == "1") {
-        projects.style.backgroundColor = "orange";
-      } else {
-        projects.style.backgroundColor = "black";
-      }
-      if (indexSeccionActivada == "2") {
-        contact.style.backgroundColor = "orange";
-      } else {
-        contact.style.backgroundColor = "black";
-      }
-    });
-  },
-  {
-    rootMargin: "40px 0px 0px 0px",
-    threshold: 0.2,
-  }
-);
+const observer = new IntersectionObserver(loadImage, {
+  root: null,
+  rootMargin: "40px 0px 0px 0px",
+  threshold: 0.5,
+});
 
-sections.forEach((section) => observer.observe(section));
+observer.observe(miniSection1);
