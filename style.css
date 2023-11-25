@@ -222,12 +222,17 @@ h4 {
 .see-all {
   display: flex;
   justify-content: center;
-  color: black;
   font-size: 3rem;
   border-bottom: solid 1px black;
   cursor: pointer;
   background-color: white;
   padding: 10px;
+  opacity: 0;
+  transition: 2s ease-in-out all;
+}
+
+.see-all a {
+  color: black;
 }
 
 .see-all:hover {
@@ -246,6 +251,7 @@ h4 {
   width: 75px;
   height: 75px;
   margin: 15px;
+  opacity: 0;
 }
 
 .colors {
@@ -264,9 +270,29 @@ h4 {
   transition: 1s ease-in-out all;
 }
 
-.movement {
+.opacity {
   transform: translateX(0px);
   opacity: 1;
+}
+
+.one {
+  transition: 1s ease-in-out all;
+}
+
+.two {
+  transition: 2s ease-in-out all;
+}
+
+.three {
+  transition: 3s ease-in-out all;
+}
+
+.four {
+  transition: 4s ease-in-out all;
+}
+
+.five {
+  transition: 5s ease-in-out all;
 }
 
 @keyframes move {

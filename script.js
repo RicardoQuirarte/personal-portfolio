@@ -1,30 +1,47 @@
 const elements = document.querySelectorAll(".elements");
+const stack = document.querySelectorAll(".stack");
 const projects = document.querySelector(".nav-projects");
-// const seeAll = document.querySelector(".see-all");
+const seeAll = document.querySelector(".see-all");
 
 const showElements = (entrys) => {
   entrys.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("movement");
+      entry.target.classList.add("opacity");
     }
   });
 };
 
-// const showSeeAll = (entry) => {
-//   if (entry.isIntersecting) {
-//     entry.target.classList.add("show-seeAll");
-//   }
-// };
+const showSeeAll = (entrys) => {
+  entrys.forEach((entry) => {
+    if (entry.isIntersecting) {
+      seeAll.classList.add("opacity");
+    }
+  });
+};
+
+const showStack = (entrys) => {
+  entrys.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("opacity");
+    }
+  });
+};
 
 const observer = new IntersectionObserver(showElements, {
   rootMargin: "40px 300px 0px 300px",
   threshold: 0.5,
 });
 
-// const observer2 = new IntersectionObserver(showSeeAll, {
-//   rootMargin: "40px 300px 0px 300px",
-//   threshold: 0.5,
-// });
+const observer2 = new IntersectionObserver(showSeeAll, {
+  rootMargin: "40px 0px 0px 0px",
+  threshold: 0.5,
+});
+
+const observer3 = new IntersectionObserver(showStack, {
+  rootMargin: "40px 0px 0px 0px",
+  threshold: 0.5,
+});
 
 elements.forEach((element) => observer.observe(element));
-// observer2.observe(seeAll);
+stack.forEach((element) => observer3.observe(element));
+observer2.observe(seeAll);
