@@ -1,27 +1,30 @@
-const miniSection1 = document.querySelector("#mini-section-1");
-const miniSection2 = document.querySelector("#mini-section-2");
-const text1 = document.querySelector("#text1");
-const img1 = document.querySelector("#img1");
+const elements = document.querySelectorAll(".elements");
 const projects = document.querySelector(".nav-projects");
+// const seeAll = document.querySelector(".see-all");
 
-const loadImage = (entrys, observer) => {
+const showElements = (entrys) => {
   entrys.forEach((entry) => {
     if (entry.isIntersecting) {
-      text1.classList.toggle("movement");
-      img1.classList.toggle("movementt");
-      projects.classList.toggle("colors");
-    } else {
-      text1.classList.remove("movement");
-      img1.classList.remove("movementt");
-      projects.classList.remove("colors");
+      entry.target.classList.add("movement");
     }
   });
 };
 
-const observer = new IntersectionObserver(loadImage, {
-  root: null,
-  rootMargin: "40px 0px 0px 0px",
+// const showSeeAll = (entry) => {
+//   if (entry.isIntersecting) {
+//     entry.target.classList.add("show-seeAll");
+//   }
+// };
+
+const observer = new IntersectionObserver(showElements, {
+  rootMargin: "40px 300px 0px 300px",
   threshold: 0.5,
 });
 
-observer.observe(miniSection1);
+// const observer2 = new IntersectionObserver(showSeeAll, {
+//   rootMargin: "40px 300px 0px 300px",
+//   threshold: 0.5,
+// });
+
+elements.forEach((element) => observer.observe(element));
+// observer2.observe(seeAll);

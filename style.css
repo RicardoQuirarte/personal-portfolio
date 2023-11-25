@@ -8,7 +8,6 @@ html {
 
 body {
   font-family: "Montserrat";
-  /* background-color: orange; */
 }
 
 nav {
@@ -73,16 +72,7 @@ a {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
   padding: 25px;
   width: 50%;
-}
-
-.about-me:hover {
-  background-color: #1e40af;
-  color: white;
-}
-
-.about-me:hover .tooltip {
-  background-color: #dc2626;
-  color: white;
+  border: none;
 }
 
 aside {
@@ -91,11 +81,6 @@ aside {
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
   justify-content: center;
   width: 50%;
-}
-
-aside:hover {
-  background-color: #15803d;
-  color: white;
 }
 
 .tooltip {
@@ -151,11 +136,11 @@ aside:hover {
   padding-top: 150px;
 }
 
-.projects-img-right {
+.img-right {
   box-shadow: 60px -20px black;
 }
 
-.projects-img-left {
+.img-left {
   box-shadow: -60px -20px black;
 }
 
@@ -163,7 +148,6 @@ aside:hover {
   display: flex;
   padding: 25px;
   padding-bottom: 125px;
-  border-bottom: solid 1px black;
 }
 
 .projects-info {
@@ -268,24 +252,19 @@ h4 {
   background-color: orange;
 }
 
-.text-projects-left {
-  transform: translateX(-600px);
-  opacity: 0;
-  transition: 1.5s ease-in-out all;
-}
-
-.img-projects-rigt {
+.elements-right {
   transform: translateX(600px);
   opacity: 0;
-  transition: 1.5s ease-in-out all;
+  transition: 1s ease-in-out all;
+}
+
+.elements-left {
+  transform: translateX(-600px);
+  opacity: 0;
+  transition: 1s ease-in-out all;
 }
 
 .movement {
-  transform: translateX(0px);
-  opacity: 1;
-}
-
-.movementt {
   transform: translateX(0px);
   opacity: 1;
 }
