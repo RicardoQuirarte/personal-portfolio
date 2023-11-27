@@ -1,25 +1,12 @@
-const elements = document.querySelectorAll(".elements");
-const stack = document.querySelectorAll(".stack");
+const elements = document.querySelectorAll(".element");
+const about = document.querySelector(".nav-about");
 const projects = document.querySelector(".nav-projects");
-const seeAll = document.querySelector(".see-all");
+const contact = document.querySelector(".nav-contact");
+const first = document.querySelector(".first-section");
+const second = document.querySelector(".second-section");
+const third = document.querySelector(".third-section");
 
 const showElements = (entrys) => {
-  entrys.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("opacity");
-    }
-  });
-};
-
-const showSeeAll = (entrys) => {
-  entrys.forEach((entry) => {
-    if (entry.isIntersecting) {
-      seeAll.classList.add("opacity");
-    }
-  });
-};
-
-const showStack = (entrys) => {
   entrys.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("opacity");
@@ -32,16 +19,53 @@ const observer = new IntersectionObserver(showElements, {
   threshold: 0.5,
 });
 
-const observer2 = new IntersectionObserver(showSeeAll, {
-  rootMargin: "40px 0px 0px 0px",
-  threshold: 0.5,
-});
-
-const observer3 = new IntersectionObserver(showStack, {
-  rootMargin: "40px 0px 0px 0px",
-  threshold: 0.5,
-});
-
 elements.forEach((element) => observer.observe(element));
-stack.forEach((element) => observer3.observe(element));
-observer2.observe(seeAll);
+
+const navAbout = (entrys) => {
+  entrys.forEach((entry) => {
+    if (entry.isIntersecting) {
+      about.classList.add("color");
+    } else {
+      about.classList.remove("color");
+    }
+  });
+};
+
+const navProjects = (entrys) => {
+  entrys.forEach((entry) => {
+    if (entry.isIntersecting) {
+      projects.classList.add("color");
+    } else {
+      projects.classList.remove("color");
+    }
+  });
+};
+
+const navContact = (entrys) => {
+  entrys.forEach((entry) => {
+    if (entry.isIntersecting) {
+      contact.classList.add("color");
+    } else {
+      contact.classList.remove("color");
+    }
+  });
+};
+
+const observer2 = new IntersectionObserver(navAbout, {
+  rootMargin: "40px 0px 0px 0px",
+  threshold: 0.5,
+});
+
+const observer3 = new IntersectionObserver(navProjects, {
+  rootMargin: "0px 0px 0px 0px",
+  threshold: 0.25,
+});
+
+const observer4 = new IntersectionObserver(navContact, {
+  rootMargin: "40px 0px 0px 0px",
+  threshold: 0.5,
+});
+
+observer2.observe(first);
+observer3.observe(second);
+observer4.observe(third);

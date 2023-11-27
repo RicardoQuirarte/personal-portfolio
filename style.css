@@ -35,7 +35,8 @@ li {
 }
 
 li:hover {
-  background-color: orange;
+  background-color: black;
+  color: white;
 }
 
 a {
@@ -183,9 +184,8 @@ h4 {
 }
 
 .buttons-gl:hover {
-  background-color: black;
-  color: white;
-  border: solid 1px var(--purple);
+  background-color: white;
+  color: black;
   cursor: pointer;
 }
 
@@ -221,20 +221,17 @@ h4 {
   display: flex;
   justify-content: center;
   font-size: 3rem;
+  color: black;
   border-bottom: solid 1px black;
   cursor: pointer;
   background-color: white;
   padding: 10px;
   opacity: 0;
-  transition: 2s ease-in-out all;
-}
-
-.see-all a {
-  color: black;
+  transition: opacity 2s ease-in-out;
 }
 
 .see-all:hover {
-  background-color: #dc2626;
+  background-color: var(--thirdcolor);
   color: white;
 }
 
@@ -252,8 +249,8 @@ h4 {
   opacity: 0;
 }
 
-.colors {
-  background-color: orange;
+.color {
+  background-color: black;
 }
 
 .elements-right {
