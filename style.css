@@ -1,5 +1,6 @@
 :root {
   --purple: #461c3a;
+  --thirdcolor: #00573f;
 }
 
 html {
@@ -11,15 +12,13 @@ body {
 }
 
 nav {
-  border-bottom: solid 1px black;
-  background-color: #dc2626;
-  color: white;
   height: 6vh;
   position: sticky;
   top: 0;
   z-index: 2;
   display: grid;
   padding-bottom: 10px;
+  background-color: rgb(0, 87, 63, 0.9);
 }
 
 ol {
@@ -31,7 +30,6 @@ ol {
 li {
   display: grid;
   justify-self: center;
-  background-color: black;
   align-items: center;
   padding: 10px;
 }
@@ -42,8 +40,9 @@ li:hover {
 
 a {
   text-decoration: none;
-  color: white;
   cursor: pointer;
+  color: white;
+  font-weight: bolder;
 }
 
 .home {
@@ -64,11 +63,11 @@ a {
 .first-section {
   display: flex;
   height: 93vh;
+  background-color: black;
 }
 
 .about-me {
-  background-color: black;
-  color: white;
+  background-color: white;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
   padding: 25px;
   width: 50%;
@@ -77,14 +76,13 @@ a {
 
 aside {
   display: flex;
-  background-color: orange;
+  background-color: white;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
   justify-content: center;
   width: 50%;
 }
 
 .tooltip {
-  color: white;
   width: 66px;
   height: 33px;
   text-align: center;
@@ -99,8 +97,9 @@ aside {
     0 75%
   );
   margin-left: 20px;
-  background-color: orange;
-  /* animation: change-color 2s infinite alternate, move 2s ease-in-out; */
+  background-color: var(--thirdcolor);
+  color: white;
+  animation: move 1s infinite alternate ease-in-out;
 }
 
 .me {
@@ -131,17 +130,17 @@ aside {
 
 .second-section {
   display: grid;
-  background-color: orange;
+  background-color: black;
   padding: 25px;
   padding-top: 150px;
 }
 
 .img-right {
-  box-shadow: 60px -20px black;
+  box-shadow: 60px -20px white;
 }
 
 .img-left {
-  box-shadow: -60px -20px black;
+  box-shadow: -60px -20px white;
 }
 
 .projects {
@@ -165,6 +164,7 @@ h4 {
   display: grid;
   align-items: center;
   padding: 25px;
+  color: white;
 }
 
 .git-live {
@@ -173,15 +173,13 @@ h4 {
 }
 
 .buttons-gl {
-  background-color: white;
-  border: solid 1px black;
+  background-color: var(--thirdcolor);
   margin: 15px;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   width: 60px;
   height: 20px;
   text-align: center;
   padding: 7px;
-  color: black;
 }
 
 .buttons-gl:hover {
@@ -297,12 +295,9 @@ h4 {
 
 @keyframes move {
   0% {
-    transform: rotate(45deg);
-  }
-  50% {
-    transform: rotate(-1rad);
+    transform: rotate(10deg);
   }
   100% {
-    transform: rotate(0);
+    transform: rotate(-10deg);
   }
 }

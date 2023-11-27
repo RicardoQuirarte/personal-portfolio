@@ -28,7 +28,7 @@ const showStack = (entrys) => {
 };
 
 const observer = new IntersectionObserver(showElements, {
-  rootMargin: "40px 300px 0px 300px",
+  rootMargin: "40px 600px 0px 600px",
   threshold: 0.5,
 });
 
