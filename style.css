@@ -9,6 +9,7 @@ html {
 
 body {
   font-family: "Montserrat";
+  background-color: black;
 }
 
 nav {
@@ -62,22 +63,25 @@ a {
 .first-section {
   display: flex;
   background-color: black;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 50% 100%, 0 75%);
+  height: calc(100vh - 72px);
 }
 
 .about-me {
   background-color: white;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
-  padding: 25px;
-  width: 50%;
+  padding-left: 100px;
+  /* width: 50%; */
   border: none;
+  padding-top: 50px;
+  padding-bottom: 500px;
 }
 
 aside {
   display: flex;
   background-color: white;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
   justify-content: center;
-  width: 50%;
+  padding-right: 100px;
+  /* width: 50%; */
 }
 
 .tooltip {
@@ -104,10 +108,6 @@ aside {
   margin-bottom: 200px;
   margin-top: 100px;
   padding-left: 120px;
-}
-
-.about {
-  margin-top: 100px;
 }
 
 .icons {
@@ -214,7 +214,6 @@ h4 {
   justify-content: center;
   font-size: 3rem;
   color: black;
-  border-bottom: solid 1px black;
   cursor: pointer;
   background-color: white;
   padding: 10px;
@@ -246,19 +245,19 @@ h4 {
 }
 
 .elements-right {
-  transform: translateX(50px);
+  transform: translateY(100px);
   opacity: 0;
   transition: 1s ease-in-out all;
 }
 
 .elements-left {
-  transform: translateX(-50px);
+  transform: translateY(-100px);
   opacity: 0;
   transition: 1s ease-in-out all;
 }
 
 .opacity {
-  transform: translateX(0px);
+  transform: translateY(0px);
   opacity: 1;
 }
 
@@ -288,5 +287,18 @@ h4 {
   }
   100% {
     transform: rotate(-10deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-img {
+    scale: 0.7;
+  }
+  .projects {
+    flex-direction: column;
+    padding: 0px;
+  }
+  .text-projects {
+    padding: 0px;
   }
 }
