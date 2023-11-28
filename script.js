@@ -15,7 +15,7 @@ const showElements = (entrys) => {
 };
 
 const observer = new IntersectionObserver(showElements, {
-  rootMargin: "40px 600px 0px 600px",
+  rootMargin: "40px 0px 0px 0px",
   threshold: 0.5,
 });
 
