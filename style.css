@@ -331,7 +331,7 @@ h4 {
   }
   .me {
     width: 100vw;
-    padding-top: 50px;
+    padding-top: 62px;
     padding-bottom: 200px;
     padding-left: 25px;
   }
@@ -345,7 +345,7 @@ h4 {
   .see-all {
     width: 50vw;
     font-size: 1rem;
-    margin-top: 75px;
+    margin-top: 50px;
   }
   .text-projects {
     padding-left: 50px;
@@ -353,6 +353,26 @@ h4 {
   .contact-title-text {
     font-size: 2rem;
   }
-  .tecnologys {
+  .reverse-position {
+    flex-direction: column-reverse;
+  }
+  .stack {
+    width: 60px;
+    height: 60px;
+  }
+  .contact-title-text {
+    margin-top: 50px;
+  }
+  .info {
+    padding-bottom: 75px;
+  }
+  .second-section {
+    padding-top: 75px;
+  }
+  .img-left {
+    box-shadow: 19px -19px white;
+  }
+  .img-right {
+    box-shadow: 19px -19ßpx white;
   }
 }
