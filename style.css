@@ -3,6 +3,10 @@
   --thirdcolor: #00573f;
 }
 
+/* * {
+  border: 1px solid red !important;
+} */
+
 html {
   scroll-behavior: smooth;
 }
@@ -51,9 +55,8 @@ a {
 }
 
 .icon {
-  width: 25px;
-  height: 25px;
-  padding-right: 15px;
+  width: 30px;
+  height: 30px;
 }
 
 .git-icon {
@@ -65,23 +68,29 @@ a {
   background-color: black;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 50% 100%, 0 75%);
   height: calc(100vh - 72px);
+  width: 100vw;
 }
 
 .about-me {
   background-color: white;
   padding-left: 100px;
-  /* width: 50%; */
-  border: none;
   padding-top: 50px;
-  padding-bottom: 500px;
+  width: 50%;
 }
 
-aside {
+.me {
   display: flex;
   background-color: white;
   justify-content: center;
-  padding-right: 100px;
-  /* width: 50%; */
+  width: 50%;
+  padding-top: 25px;
+}
+
+.icons {
+  display: grid;
+  align-items: center;
+  padding-left: 25px;
+  padding-bottom: 100px;
 }
 
 .tooltip {
@@ -104,18 +113,6 @@ aside {
   animation: move 1s infinite alternate ease-in-out;
 }
 
-.me {
-  margin-bottom: 200px;
-  margin-top: 100px;
-  padding-left: 120px;
-}
-
-.icons {
-  display: grid;
-  align-items: center;
-  padding-left: 50px;
-}
-
 .linkedin-icon {
   display: grid;
   align-self: end;
@@ -129,12 +126,12 @@ aside {
 .second-section {
   display: grid;
   background-color: black;
-  padding: 25px;
   padding-top: 150px;
+  width: 98vw;
 }
 
 .img-right {
-  box-shadow: 60px -20px white;
+  box-shadow: 20px -20px white;
 }
 
 .img-left {
@@ -145,6 +142,7 @@ aside {
   display: flex;
   padding: 25px;
   padding-bottom: 125px;
+  width: 95vw;
 }
 
 .projects-info {
@@ -163,6 +161,7 @@ h4 {
   align-items: center;
   padding: 25px;
   color: white;
+  width: 80vw;
 }
 
 .git-live {
@@ -213,17 +212,25 @@ h4 {
   display: flex;
   justify-content: center;
   font-size: 3rem;
-  color: black;
+  color: white;
   cursor: pointer;
-  background-color: white;
+  background-color: var(--thirdcolor);
   padding: 10px;
   opacity: 0;
   transition: opacity 2s ease-in-out;
+  width: 80vw;
 }
 
-.see-all:hover {
-  background-color: var(--thirdcolor);
-  color: white;
+.my-github:hover .see-all {
+  background-color: white;
+  color: black;
+}
+
+.my-github {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  justify-items: center;
 }
 
 .info {
@@ -281,6 +288,13 @@ h4 {
   transition: 5s ease-in-out all;
 }
 
+.tecnologys {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+
 @keyframes move {
   0% {
     transform: rotate(10deg);
@@ -300,5 +314,45 @@ h4 {
   }
   .text-projects {
     padding: 0px;
+  }
+  .about-me {
+    padding-left: 20px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+  .me-animated {
+    scale: 0.5;
+  }
+  .first-section {
+    flex-direction: column;
+  }
+  .about-me {
+    width: 100vw;
+  }
+  .me {
+    width: 100vw;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    padding-left: 25px;
+  }
+  ol {
+    padding-right: 10px;
+    padding-left: 0px;
+  }
+  .tooltip {
+    margin-left: 150px;
+  }
+  .see-all {
+    width: 50vw;
+    font-size: 1rem;
+    margin-top: 75px;
+  }
+  .text-projects {
+    padding-left: 50px;
+  }
+  .contact-title-text {
+    font-size: 2rem;
+  }
+  .tecnologys {
   }
 }
