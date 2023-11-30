@@ -295,6 +295,10 @@ h4 {
   padding-bottom: 40px;
 }
 
+.cartoon-me {
+  width: 300px;
+}
+
 @keyframes move {
   0% {
     transform: rotate(10deg);
@@ -320,8 +324,8 @@ h4 {
     padding-top: 50px;
     padding-bottom: 25px;
   }
-  .me-animated {
-    scale: 0.5;
+  .cartoon-me {
+    width: 150px;
   }
   .first-section {
     flex-direction: column;
@@ -345,7 +349,7 @@ h4 {
   .see-all {
     width: 50vw;
     font-size: 1rem;
-    margin-top: 50px;
+    margin-top: 65px;
   }
   .text-projects {
     padding-left: 50px;
@@ -374,5 +378,8 @@ h4 {
   }
   .img-right {
     box-shadow: 19px -19ßpx white;
+  }
+  .my-github {
+    margin-bottom: 75px;
   }
 }
