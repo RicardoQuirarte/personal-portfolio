@@ -73,9 +73,14 @@ a {
 
 .about-me {
   background-color: white;
-  padding-left: 100px;
-  padding-top: 50px;
+  padding-left: 175px;
+  padding-top: 100px;
   width: 50%;
+}
+
+article {
+  width: 500px;
+  font-size: 1.2rem;
 }
 
 .me {
@@ -148,6 +153,8 @@ a {
 .projects-info {
   text-align: center;
   align-self: start;
+  width: 500px;
+  justify-self: center;
 }
 
 h4 {
@@ -322,7 +329,6 @@ h4 {
   .about-me {
     padding-left: 20px;
     padding-top: 50px;
-    padding-bottom: 25px;
   }
   .cartoon-me {
     width: 150px;
@@ -335,9 +341,9 @@ h4 {
   }
   .me {
     width: 100vw;
-    padding-top: 62px;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
     padding-left: 25px;
+    padding-top: 20px;
   }
   ol {
     padding-right: 10px;
@@ -353,6 +359,7 @@ h4 {
   }
   .text-projects {
     padding-left: 50px;
+    padding-bottom: 60px;
   }
   .contact-title-text {
     font-size: 2rem;
@@ -377,9 +384,18 @@ h4 {
     box-shadow: 19px -19px white;
   }
   .img-right {
-    box-shadow: 19px -19ßpx white;
+    box-shadow: 19px -19px white;
   }
   .my-github {
     margin-bottom: 75px;
+  }
+  article {
+    width: 300px;
+  }
+  .projects-info {
+    width: 300px;
+  }
+  h4 {
+    margin: 0px;
   }
 }
