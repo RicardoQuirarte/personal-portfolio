@@ -323,13 +323,16 @@ h4 {
   .projects-img {
     scale: 0.7;
   }
+
   .projects {
     flex-direction: column;
     padding: 0px;
   }
+
   .text-projects {
     padding: 0px;
   }
+
   .about-me {
     padding-left: 20px;
     padding-top: 50px;
@@ -338,71 +341,98 @@ h4 {
     flex-direction: column;
     align-items: center;
   }
+
   .cartoon-me {
     width: 150px;
   }
+
   .first-section {
     flex-direction: column;
     height: auto;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 50% 100%, 0 85%);
   }
+
   .me {
     width: auto;
     padding-bottom: 50px;
     padding-left: 50px;
     padding-top: 25px;
   }
+
   ol {
     padding-right: 10px;
     padding-left: 0px;
   }
+
   .tooltip {
     margin-left: 0px;
   }
+
   .see-all {
     width: 50vw;
     font-size: 1rem;
   }
+
   .contact-title-text {
     font-size: 2rem;
   }
+
   .reverse-position {
     flex-direction: column-reverse;
   }
+
   .stack {
     width: 60px;
     height: 60px;
   }
+
   .contact-title-text {
     margin-top: 50px;
   }
+
   .info {
     padding-bottom: 75px;
   }
+
   .second-section {
     padding-top: 50px;
   }
+
   .img-left {
     box-shadow: 19px -19px white;
   }
+
   .img-right {
     box-shadow: 19px -19px white;
   }
+
   .my-github {
     margin-bottom: 75px;
   }
+
   article {
     width: 300px;
     text-align: center;
     padding-bottom: 10px;
   }
+
   .projects-info {
     width: 300px;
   }
+
   h4 {
     margin: 0px;
   }
+
   .my-name {
     margin-left: 10px;
+  }
+
+  h2 {
+    margin-top: 0px;
+  }
+
+  .git-live {
+    margin-bottom: 50px;
   }
 }
