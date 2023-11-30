@@ -343,13 +343,13 @@ h4 {
   }
   .first-section {
     flex-direction: column;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 50% 100%, 0 90%);
+    height: auto;
   }
   .me {
     width: auto;
     padding-bottom: 50px;
-    padding-left: 25px;
-    padding-top: 20px;
+    padding-left: 50px;
+    padding-top: 25px;
   }
   ol {
     padding-right: 10px;
@@ -384,7 +384,6 @@ h4 {
     padding-bottom: 75px;
   }
   .second-section {
-    padding-top: 75px;
   }
   .img-left {
     box-shadow: 19px -19px white;
